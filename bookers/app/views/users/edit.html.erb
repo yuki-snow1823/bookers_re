@@ -1,0 +1,14 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+
+<h1>編集画面</h1>
+<%= form_for(@user) do |f| %>
+    <h4>プロフィール画像</h4>
+    <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg"%><br>
+    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像"%>
+    <h4>名前</h4>
+    <%= f.text_field :name %>
+    <h4>自己紹介</h4>
+    <%= f.text_area :introduction %><br>
+    <%= f.submit '保存' %>    
+<% end %>

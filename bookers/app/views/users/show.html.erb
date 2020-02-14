@@ -1,0 +1,11 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<h2>プロフ User Info</h2>
+<p>名前： <%= @user.name %></p><br>
+<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg"%>
+<P>自己紹介：<%= @user.introduction %></p> 
+<%= link_to "プロフィール編集", edit_user_path %>
+
+<h2>新規投稿 New Book</h2>
+<h2>自分の投稿した本一覧 Books</h2>
